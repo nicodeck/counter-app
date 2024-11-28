@@ -10,6 +10,12 @@ export default function App() {
         <Pressable onPress={() => setCounter(counter + 1)}>
           <Text style={styles.button}>+1</Text>
         </Pressable>
+        <Pressable onPress={() => setCounter(counter + 10)}>
+          <Text style={styles.button}>+10</Text>
+        </Pressable>
+        <Pressable onPress={() => setCounter(counter + 50)}>
+          <Text style={styles.button}>+50</Text>
+        </Pressable>
         <Pressable onPress={() => setCounter(0)}>
           <Text style={styles.button}>Reset</Text>
         </Pressable>
@@ -29,6 +35,7 @@ const styles = StyleSheet.create({
   buttonsContainer: {
     flexDirection: "row",
     gap: 20,
+    flexWrap: "wrap",
   },
   text: {},
   button: {
